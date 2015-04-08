@@ -1,4 +1,19 @@
-angular.module('starter.controllers', [])
+"use strict";
+
+
+
+angular.module('starter.controllers', ['firebase', 'starter.services'])
+
+
+.controller('AuthCtrl', function ($firebaseArray, $firebaseObject, Auth) {
+
+        var ref = new Firebase("https://whatspup.firebaseio.com/");
+
+        this.login = Auth.sitterlogin;
+    
+        console.log(this.login);
+})
+
 
 .controller('DashCtrl', function($scope) {})
 
